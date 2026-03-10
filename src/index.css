@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #121212;
+  --color-secondary: #1a1a1a;
+  --color-accent: #d9480f; /* Burnt Orange */
+  --color-accent-hover: #c4410d;
+  --color-steel: #2d2d2d;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tighter uppercase;
+  }
+}
+
+.glass-nav {
+  @apply bg-primary/80 backdrop-blur-md border-b border-white/5;
+}
+
+.btn-primary {
+  @apply bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-none font-bold uppercase tracking-widest transition-all duration-300 inline-block;
+}
+
+.btn-outline {
+  @apply border-2 border-white hover:bg-white hover:text-black text-white px-8 py-4 rounded-none font-bold uppercase tracking-widest transition-all duration-300 inline-block;
+}
+
+.section-padding {
+  @apply py-24 px-6 md:px-12 lg:px-24;
+}
+
+.card-hover {
+  @apply transition-transform duration-500 hover:-translate-y-2;
+}
